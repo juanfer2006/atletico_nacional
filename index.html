@@ -26,6 +26,22 @@
         <section id="inicio" class="hero">
             <h1>Pasión y Orgullo Verdolaga</h1>
             <p>Bienvenido al sitio para seguir la actualidad, la plantilla y los partidos de Atlético Nacional.</p>
+            <a href="#plantilla" class="btn-hero">Ver Plantilla</a>
+        </section>
+
+        <section id="plantilla" class="plantilla">
+            <h2>Plantilla Verdolaga</h2>
+            <p>Conoce a los jugadores que defienden los colores de Atlético Nacional en cada posición.</p>
+
+            <div class="filtros-plantilla">
+                <button type="button" class="btn-filtro" data-posicion="todos">Todos</button>
+                <button type="button" class="btn-filtro" data-posicion="arquero">Arqueros</button>
+                <button type="button" class="btn-filtro" data-posicion="defensa">Defensas</button>
+                <button type="button" class="btn-filtro" data-posicion="volante">Volantes</button>
+                <button type="button" class="btn-filtro" data-posicion="delantero">Delanteros</button>
+            </div>
+
+            <div id="jugadores-container" class="jugadores-container"></div>
         </section>
     </main>
 
