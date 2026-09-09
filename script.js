@@ -1,86 +1,97 @@
-// 1. ARREGLO DE JUGADORES (DATOS DEL CATÁLOGO)
+// 1. ARREGLO DE PRODUCTOS (DATOS DEL CATÁLOGO)
 
-const jugadores = [
+const productos = [
     {
-        nombre: "Franco Armani",
-        posicion: "Arquero",
-        numero: 1,
+        id: 1,
+        nombre: "Camiseta Titular 2026",
+        categoria: "camisetas",
+        precio: "$ 249.900",
+        imagen: "https://images.unsplash.com/photo-1577210897949-1f56f9435824?w=500&auto=format&fit=crop&q=60",
+        descripcion: "Camiseta oficial verdolaga con franjas verdes y blancas tradicionales y tecnología transpirable."
+    },
+    {
+        id: 2,
+        nombre: "Camiseta Alternativa Negra",
+        categoria: "camisetas",
+        precio: "$ 239.900",
+        imagen: "https://images.unsplash.com/photo-1521572267360-ee0c2909d518?w=500&auto=format&fit=crop&q=60",
+        descripcion: "Edición especial en color negro con detalles y escudo en verde neón de alta calidad."
+    },
+    {
+        id: 3,
+        nombre: "Gorra Urbana Verdolaga",
+        categoria: "accesorios",
+        precio: "$ 69.900",
+        imagen: "https://images.unsplash.com/photo-1588850561407-ed78c282e89b?w=500&auto=format&fit=crop&q=60",
+        descripcion: "Gorra con visera curva, ajuste trasero y escudo bordado en relieve para uso diario."
+    },
+    {
+        id: 4,
+        nombre: "Bufanda Estadio Doble Faz",
+        categoria: "accesorios",
+        precio: "$ 45.000",
+        imagen: "https://images.unsplash.com/photo-1520903920243-00d872a2d1c9?w=500&auto=format&fit=crop&q=60",
+        descripcion: "Bufanda tejida con los colores verdolagas y la frase 'El Más Grande de Colombia'."
+    },
+    {
+        id: 5,
+        nombre: "Termo Metálico Verdolaga",
+        categoria: "accesorios",
+        precio: "$ 55.000",
+        imagen: "https://images.unsplash.com/photo-1602143407151-7111542de6e8?w=500&auto=format&fit=crop&q=60",
+        descripcion: "Termo de acero inoxidable con aislamiento térmico para bebidas frías y calientes."
+    },
+    {
+        id: 6,
+        nombre: "Bandera Gigante 'Soy del Verde'",
+        categoria: "coleccionables",
+        precio: "$ 49.900",
         imagen: "https://images.unsplash.com/photo-1517466787929-bc90951d0974?w=500&auto=format&fit=crop&q=60",
-        descripcion: "Guardameta referente y líder bajo los tres palos con amplia trayectoria internacional."
+        descripcion: "Bandera de 1.50 x 1.00 m en poliéster resistente para alentar en la tribuna o lucir en tu habitación."
     },
     {
-        nombre: "Luis Marquínez",
-        posicion: "Arquero",
-        numero: 25,
-        imagen: "https://images.unsplash.com/photo-1574629810360-7efbbe195018?w=500&auto=format&fit=crop&q=60",
-        descripcion: "Joven arquero con gran agilidad, reflejos rápidos y excelente proyección bajo el arco."
+        id: 7,
+        nombre: "Balón Conmemorativo Gloria",
+        categoria: "coleccionables",
+        precio: "$ 119.900",
+        imagen: "https://images.unsplash.com/photo-1614632537423-1e6c2e7e0aab?w=500&auto=format&fit=crop&q=60",
+        descripcion: "Balón decorativo de colección con acabados dorados y detalles de los títulos internacionales."
     },
     {
-        nombre: "William Tesillo",
-        posicion: "Defensa",
-        numero: 3,
-        imagen: "https://images.unsplash.com/photo-1508098682722-e99c43a406b2?w=500&auto=format&fit=crop&q=60",
-        descripcion: "Defensa central con solidez aérea, liderazgo, anticipación y salida limpia con el balón."
-    },
-    {
-        nombre: "Cesar Haydar",
-        posicion: "Defensa",
-        numero: 4,
-        imagen: "https://images.unsplash.com/photo-1517466787929-bc90951d0974?w=500&auto=format&fit=crop&q=60",
-        descripcion: "Zaguero aguerrido, fuerte en los duelos individuales y con gran sentido de ubicación."
-    },
-    {
-        nombre: "Edwin Cardona",
-        posicion: "Volante",
-        numero: 10,
-        imagen: "https://images.unsplash.com/photo-1574629810360-7efbbe195018?w=500&auto=format&fit=crop&q=60",
-        descripcion: "Volante creativo con excelente visión de juego, precisión en pases y potente pegada."
-    },
-    {
-        nombre: "Jorman Campuzano",
-        posicion: "Volante",
-        numero: 21,
-        imagen: "https://images.unsplash.com/photo-1508098682722-e99c43a406b2?w=500&auto=format&fit=crop&q=60",
-        descripcion: "Volante de recuperación con gran despliegue físico, equilibrio táctico e intercepción."
-    },
-    {
-        nombre: "Alfredo Morelos",
-        posicion: "Delantero",
-        numero: 9,
-        imagen: "https://images.unsplash.com/photo-1517466787929-bc90951d0974?w=500&auto=format&fit=crop&q=60",
-        descripcion: "Delantero potente, con gran capacidad de desmarque y definición implacable en el área rival."
-    },
-    {
-        nombre: "Cristian Arango",
-        posicion: "Delantero",
-        numero: 17,
-        imagen: "https://images.unsplash.com/photo-1574629810360-7efbbe195018?w=500&auto=format&fit=crop&q=60",
-        descripcion: "Atacante veloz y desequilibrante por las bandas con potencia física y llegada al gol."
+        id: 8,
+        nombre: "Pin Metálico Escudo Legendario",
+        categoria: "coleccionables",
+        precio: "$ 25.000",
+        imagen: "https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?w=500&auto=format&fit=crop&q=60",
+        descripcion: "Pin esmaltado de alta precisión para chaquetas, morrales o colección de recuerdos."
     }
 ];
 
-// 2. FUNCIÓN PARA GENERAR LAS TARJETAS DINÁMICAMENTE
+// ==========================================================================
+// 2. FUNCIÓN PARA GENERAR LAS TARJETAS DE PRODUCTOS DINÁMICAMENTE
+// ==========================================================================
+function renderizarProductos(listaProductos) {
+    const contenedor = document.getElementById("productos-container");
 
-function renderizarJugadores(listaJugadores) {
-    const contenedor = document.getElementById("jugadores-container");
+    if (!contenedor) return;
 
-    // Limpiar el contenedor antes de renderizar
+    // Limpiar el contenedor antes de insertar las tarjetas
     contenedor.innerHTML = "";
 
     // Recorrer el arreglo y crear cada tarjeta en el DOM
-    listaJugadores.forEach(jugador => {
+    listaProductos.forEach(producto => {
         const tarjeta = document.createElement("article");
-        tarjeta.classList.add("tarjeta-jugador");
+        tarjeta.classList.add("tarjeta-producto");
 
         tarjeta.innerHTML = `
-            <img src="${jugador.imagen}" alt="${jugador.nombre}" class="jugador-img">
-            <div class="jugador-info">
-                <div class="jugador-header">
-                    <h3 class="jugador-nombre">${jugador.nombre}</h3>
-                    <span class="jugador-dorsal">#${jugador.numero}</span>
+            <img src="${producto.imagen}" alt="${producto.nombre}" class="producto-img">
+            <div class="producto-info">
+                <div class="producto-header">
+                    <h3 class="producto-nombre">${producto.nombre}</h3>
+                    <span class="producto-precio">${producto.precio}</span>
                 </div>
-                <span class="jugador-posicion">${jugador.posicion}</span>
-                <p class="jugador-desc">${jugador.descripcion}</p>
+                <span class="producto-categoria">${producto.categoria}</span>
+                <p class="producto-desc">${producto.descripcion}</p>
             </div>
         `;
 
@@ -88,8 +99,9 @@ function renderizarJugadores(listaJugadores) {
     });
 }
 
+// ==========================================================================
 // 3. INICIALIZACIÓN AL CARGAR EL DOCUMENTO
-
+// ==========================================================================
 document.addEventListener("DOMContentLoaded", () => {
-    renderizarJugadores(jugadores);
+    renderizarProductos(productos);
 });

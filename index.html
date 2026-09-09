@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portal Verdolaga - Atlético Nacional</title>
+    <title>Tienda Verdolaga - Atlético Nacional</title>
     <link rel="stylesheet" href="styles.css">
     <script src="script.js" defer></script>
 </head>
@@ -11,43 +11,93 @@
     <header>
         <nav class="navbar">
             <div class="logo">
-                <a href="#inicio">Portal Verdolaga</a>
+                <a href="#inicio">Tienda Verdolaga</a>
             </div>
             <ul class="nav-links">
                 <li><a href="#inicio">Inicio</a></li>
-                <li><a href="#plantilla">Plantilla</a></li>
-                <li><a href="#partidos">Partidos</a></li>
-                <li><a href="#noticias">Noticias</a></li>
+                <li><a href="#productos">Productos</a></li>
+                <li><a href="#categorias">Categorías</a></li>
+                <li><a href="#nosotros">Nosotros</a></li>
                 <li><a href="#registro">Registro</a></li>
             </ul>
         </nav>
     </header>
 
     <main>
+        <!-- 1. SECCIÓN HERO -->
         <section id="inicio" class="hero">
-            <h1>Pasión y Orgullo Verdolaga</h1>
-            <p>Bienvenido al sitio para seguir la actualidad, la plantilla y los partidos de Atlético Nacional.</p>
-            <a href="#plantilla" class="btn-hero">Ver Plantilla</a>
+            <h1>Pasión Verdolaga en cada producto</h1>
+            <p>Descubre productos inspirados en los colores y la historia de Atlético Nacional.</p>
+            <a href="#productos" class="btn-hero">Ver productos</a>
         </section>
 
-        <section id="plantilla" class="plantilla">
-            <h2>Plantilla Verdolaga</h2>
-            <p>Conoce a los jugadores que defienden los colores de Atlético Nacional en cada posición.</p>
+        <!-- 2. SECCIÓN PRODUCTOS -->
+        <section id="productos" class="productos">
+            <h2>Productos Verdolagas</h2>
+            <p>Encuentra productos para llevar la pasión por Atlético Nacional a cualquier lugar.</p>
 
-            <div class="filtros-plantilla">
-                <button type="button" class="btn-filtro activo" data-posicion="todos">Todos</button>
-                <button type="button" class="btn-filtro" data-posicion="arquero">Arqueros</button>
-                <button type="button" class="btn-filtro" data-posicion="defensa">Defensas</button>
-                <button type="button" class="btn-filtro" data-posicion="volante">Volantes</button>
-                <button type="button" class="btn-filtro" data-posicion="delantero">Delanteros</button>
+            <div class="filtros-productos">
+                <button type="button" class="btn-filtro activo" data-categoria="todos">Todos</button>
+                <button type="button" class="btn-filtro" data-categoria="camisetas">Camisetas</button>
+                <button type="button" class="btn-filtro" data-categoria="accesorios">Accesorios</button>
+                <button type="button" class="btn-filtro" data-categoria="coleccionables">Coleccionables</button>
             </div>
 
-            <div id="jugadores-container" class="jugadores-container"></div>
+            <div id="productos-container" class="productos-container"></div>
+        </section>
+
+        <!-- 3. SECCIÓN CATEGORÍAS -->
+        <section id="categorias" class="categorias">
+            <h2>Categorías</h2>
+
+            <div class="categorias-container">
+                <article class="tarjeta-categoria">
+                    <h3>Camisetas</h3>
+                    <p>Productos inspirados en los colores y la identidad verdolaga.</p>
+                </article>
+                <article class="tarjeta-categoria">
+                    <h3>Accesorios</h3>
+                    <p>Accesorios para llevar la pasión verdolaga contigo.</p>
+                </article>
+                <article class="tarjeta-categoria">
+                    <h3>Coleccionables</h3>
+                    <p>Objetos especiales para los aficionados y coleccionistas.</p>
+                </article>
+            </div>
+        </section>
+
+        <!-- 4. SECCIÓN NOSOTROS -->
+        <section id="nosotros" class="nosotros">
+            <h2>Sobre la tienda</h2>
+            <div class="nosotros-contenido">
+                <p>Tienda Verdolaga es una propuesta académica de tienda temática inspirada en Atlético Nacional, creada para presentar un catálogo de productos relacionados con el equipo y sus colores.</p>
+            </div>
+        </section>
+
+        <!-- 5. SECCIÓN REGISTRO -->
+        <section id="registro" class="registro">
+            <h2>Regístrate</h2>
+
+            <form id="form-registro" class="form-registro">
+                <div class="campo-formulario">
+                    <label for="nombre">Nombre completo</label>
+                    <input type="text" id="nombre" name="nombre" placeholder="Ingresa tu nombre y apellido" required>
+                </div>
+                <div class="campo-formulario">
+                    <label for="email">Correo electrónico</label>
+                    <input type="email" id="email" name="email" placeholder="ejemplo@correo.com" required>
+                </div>
+                <div class="campo-formulario">
+                    <label for="telefono">Teléfono</label>
+                    <input type="tel" id="telefono" name="telefono" placeholder="Ej: 3001234567" required>
+                </div>
+                <button type="submit" class="btn-formulario">Registrarme</button>
+            </form>
         </section>
     </main>
 
     <footer>
-        <p>&copy; 2026 Portal Verdolaga - Todos los derechos reservados.</p>
+        <p>&copy; 2026 Tienda Verdolaga - Todos los derechos reservados.</p>
     </footer>
 </body>
 </html>
