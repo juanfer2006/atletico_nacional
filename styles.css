@@ -30,10 +30,12 @@ body {
     min-height: 100vh;
     display: flex;
     flex-direction: column;
+    overflow-x: hidden;
 }
 
 main {
     flex: 1;
+    width: 100%;
 }
 
 h1, h2, h3 {
@@ -61,6 +63,7 @@ header {
     position: sticky;
     top: 0;
     z-index: 100;
+    width: 100%;
 }
 
 .navbar {
@@ -84,6 +87,7 @@ header {
     list-style: none;
     gap: 1.5rem;
     align-items: center;
+    flex-wrap: wrap;
 }
 
 .nav-links a {
@@ -187,7 +191,7 @@ header {
 }
 
 /* ==========================================================================
-   6. CATÁLOGO DE PRODUCTOS (CSS GRID - ESCRITORIO)
+   6. CATÁLOGO DE PRODUCTOS (CSS GRID - ESCRITORIO BASE: 3 COLUMNAS)
    ========================================================================== */
 .productos-container {
     display: grid;
@@ -244,6 +248,7 @@ header {
     font-weight: 700;
     padding: 0.2rem 0.6rem;
     border-radius: 20px;
+    white-space: nowrap;
 }
 
 .producto-categoria {
@@ -268,7 +273,7 @@ header {
 }
 
 /* ==========================================================================
-   7. SECCIÓN CATEGORÍAS
+   7. SECCIÓN CATEGORÍAS (ESCRITORIO BASE: 3 COLUMNAS)
    ========================================================================== */
 .categorias {
     max-width: 1200px;
@@ -349,11 +354,6 @@ header {
     color: var(--texto-secundario);
     font-size: 1rem;
     line-height: 1.7;
-    margin-bottom: 1rem;
-}
-
-.nosotros-contenido p:last-child {
-    margin-bottom: 0;
 }
 
 /* ==========================================================================
@@ -384,6 +384,7 @@ header {
     box-shadow: var(--sombra-suave);
     border: 1px solid #E5E7EB;
     text-align: left;
+    width: 100%;
 }
 
 .campo-formulario {
@@ -400,6 +401,7 @@ header {
 }
 
 .campo-formulario input {
+    width: 100%;
     padding: 0.75rem 1rem;
     border: 1px solid #D1D5DB;
     border-radius: var(--borde-radio);
@@ -444,4 +446,161 @@ footer {
     padding: 1.5rem;
     margin-top: auto;
     font-size: 0.9rem;
+    width: 100%;
+}
+
+/* ==========================================================================
+   11. MEDIA QUERIES (DISEÑO RESPONSIVE)
+   ========================================================================== */
+
+/* --- TABLET (máx. 992px) --- */
+@media (max-width: 992px) {
+    .navbar {
+        padding: 0.85rem 1.25rem;
+    }
+
+    .nav-links {
+        gap: 1rem;
+    }
+
+    .hero {
+        padding: 3.5rem 1.25rem;
+        margin-bottom: 2.5rem;
+    }
+
+    .hero h1 {
+        font-size: 2.1rem;
+    }
+
+    .productos-container {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1.5rem;
+    }
+
+    .categorias-container {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1.25rem;
+    }
+
+    .productos,
+    .categorias,
+    .nosotros,
+    .registro {
+        padding: 0 1.25rem;
+        margin-bottom: 3rem;
+    }
+}
+
+/* --- CELULAR / PANTALLAS PEQUEÑAS (máx. 600px) --- */
+@media (max-width: 600px) {
+    .navbar {
+        flex-direction: column;
+        gap: 0.75rem;
+        padding: 0.85rem 1rem;
+        text-align: center;
+    }
+
+    .logo a {
+        font-size: 1.35rem;
+    }
+
+    .nav-links {
+        justify-content: center;
+        gap: 0.4rem 0.6rem;
+    }
+
+    .nav-links a {
+        padding: 0.35rem 0.55rem;
+        font-size: 0.9rem;
+    }
+
+    .hero {
+        padding: 2.75rem 1rem;
+        margin-bottom: 2rem;
+    }
+
+    .hero h1 {
+        font-size: 1.65rem;
+        line-height: 1.25;
+    }
+
+    .hero p {
+        font-size: 0.95rem;
+        margin-bottom: 1.25rem;
+    }
+
+    .btn-hero {
+        padding: 0.65rem 1.35rem;
+        font-size: 0.95rem;
+    }
+
+    .productos h2,
+    .categorias h2,
+    .nosotros h2,
+    .registro h2 {
+        font-size: 1.6rem;
+    }
+
+    .filtros-productos {
+        gap: 0.5rem;
+        margin-bottom: 1.75rem;
+    }
+
+    .btn-filtro {
+        padding: 0.4rem 0.85rem;
+        font-size: 0.85rem;
+    }
+
+    .productos-container {
+        grid-template-columns: 1fr;
+        gap: 1.25rem;
+    }
+
+    .producto-img {
+        height: 200px;
+    }
+
+    .categorias-container {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+
+    .tarjeta-categoria {
+        padding: 1.25rem 1rem;
+    }
+
+    .nosotros-contenido {
+        padding: 1.25rem 1rem;
+    }
+
+    .nosotros-contenido p {
+        font-size: 0.95rem;
+    }
+
+    .form-registro {
+        padding: 1.5rem 1rem;
+    }
+
+    .campo-formulario input {
+        padding: 0.65rem 0.85rem;
+        font-size: 0.95rem;
+    }
+
+    .btn-formulario {
+        padding: 0.75rem;
+        font-size: 0.95rem;
+    }
+
+    .productos,
+    .categorias,
+    .nosotros,
+    .registro {
+        padding: 0 1rem;
+        margin-bottom: 2.5rem;
+    }
+
+    footer {
+        padding: 1.25rem 1rem;
+        font-size: 0.85rem;
+    }
 }

@@ -1,74 +1,67 @@
-// 1. ARREGLO DE PRODUCTOS (DATOS DEL CATÁLOGO)
-
+// ==========================================================================
+// 1. ARREGLO DE PRODUCTOS (TIENDA VERDOLAGA)
+// ==========================================================================
 const productos = [
     {
-        id: 1,
-        nombre: "Camiseta Titular 2026",
+        nombre: "Camiseta Verde Clásica",
         categoria: "camisetas",
-        precio: "$ 249.900",
+        precio: 249900,
         imagen: "https://images.unsplash.com/photo-1577210897949-1f56f9435824?w=500&auto=format&fit=crop&q=60",
-        descripcion: "Camiseta oficial verdolaga con franjas verdes y blancas tradicionales y tecnología transpirable."
+        descripcion: "Diseño tradicional con las clásicas franjas verdes y blancas, confeccionada en tejido transpirable."
     },
     {
-        id: 2,
+        nombre: "Camiseta Blanca Verdolaga",
+        categoria: "camisetas",
+        precio: 239900,
+        imagen: "https://images.unsplash.com/photo-1521572267360-ee0c2909d518?w=500&auto=format&fit=crop&q=60",
+        descripcion: "Edición visitante en color blanco con detalles verdes y escudo bordado de alta definición."
+    },
+    {
         nombre: "Camiseta Alternativa Negra",
         categoria: "camisetas",
-        precio: "$ 239.900",
-        imagen: "https://images.unsplash.com/photo-1521572267360-ee0c2909d518?w=500&auto=format&fit=crop&q=60",
-        descripcion: "Edición especial en color negro con detalles y escudo en verde neón de alta calidad."
+        precio: 229900,
+        imagen: "https://images.unsplash.com/photo-1503342217505-b0a15ec3261c?w=500&auto=format&fit=crop&q=60",
+        descripcion: "Estilo moderno en fondo negro con vivos verdes neón y acabado de alto rendimiento deportivo."
     },
     {
-        id: 3,
-        nombre: "Gorra Urbana Verdolaga",
+        nombre: "Gorra Verde Urbana",
         categoria: "accesorios",
-        precio: "$ 69.900",
+        precio: 69900,
         imagen: "https://images.unsplash.com/photo-1588850561407-ed78c282e89b?w=500&auto=format&fit=crop&q=60",
-        descripcion: "Gorra con visera curva, ajuste trasero y escudo bordado en relieve para uso diario."
+        descripcion: "Gorra con visera curva, broche ajustable y escudo verdolaga bordado en relieve."
     },
     {
-        id: 4,
-        nombre: "Bufanda Estadio Doble Faz",
+        nombre: "Bufanda Verdolaga Estadio",
         categoria: "accesorios",
-        precio: "$ 45.000",
+        precio: 45000,
         imagen: "https://images.unsplash.com/photo-1520903920243-00d872a2d1c9?w=500&auto=format&fit=crop&q=60",
-        descripcion: "Bufanda tejida con los colores verdolagas y la frase 'El Más Grande de Colombia'."
+        descripcion: "Bufanda tejida doble faz con flecos y la frase representativa de la hinchada."
     },
     {
-        id: 5,
         nombre: "Termo Metálico Verdolaga",
         categoria: "accesorios",
-        precio: "$ 55.000",
+        precio: 55000,
         imagen: "https://images.unsplash.com/photo-1602143407151-7111542de6e8?w=500&auto=format&fit=crop&q=60",
-        descripcion: "Termo de acero inoxidable con aislamiento térmico para bebidas frías y calientes."
+        descripcion: "Botella de acero inoxidable con tapa hermética para mantener tus bebidas a temperatura ideal."
     },
     {
-        id: 6,
         nombre: "Bandera Gigante 'Soy del Verde'",
         categoria: "coleccionables",
-        precio: "$ 49.900",
+        precio: 49900,
         imagen: "https://images.unsplash.com/photo-1517466787929-bc90951d0974?w=500&auto=format&fit=crop&q=60",
-        descripcion: "Bandera de 1.50 x 1.00 m en poliéster resistente para alentar en la tribuna o lucir en tu habitación."
+        descripcion: "Bandera de gran tamaño (1.50 x 1.00 m) elaborada en poliéster resistente para alentar con orgullo."
     },
     {
-        id: 7,
-        nombre: "Balón Conmemorativo Gloria",
+        nombre: "Balón Coleccionable Gloria",
         categoria: "coleccionables",
-        precio: "$ 119.900",
+        precio: 119900,
         imagen: "https://images.unsplash.com/photo-1614632537423-1e6c2e7e0aab?w=500&auto=format&fit=crop&q=60",
-        descripcion: "Balón decorativo de colección con acabados dorados y detalles de los títulos internacionales."
-    },
-    {
-        id: 8,
-        nombre: "Pin Metálico Escudo Legendario",
-        categoria: "coleccionables",
-        precio: "$ 25.000",
-        imagen: "https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?w=500&auto=format&fit=crop&q=60",
-        descripcion: "Pin esmaltado de alta precisión para chaquetas, morrales o colección de recuerdos."
+        descripcion: "Balón decorativo conmemorativo con detalles dorados de los títulos y copas más importantes."
     }
 ];
 
 // ==========================================================================
-// 2. FUNCIÓN PARA GENERAR LAS TARJETAS DE PRODUCTOS DINÁMICAMENTE
+// 2. FUNCIÓN PARA RENDERIZAR LAS TARJETAS DINÁMICAMENTE
 // ==========================================================================
 function renderizarProductos(listaProductos) {
     const contenedor = document.getElementById("productos-container");
@@ -78,17 +71,20 @@ function renderizarProductos(listaProductos) {
     // Limpiar el contenedor antes de insertar las tarjetas
     contenedor.innerHTML = "";
 
-    // Recorrer el arreglo y crear cada tarjeta en el DOM
+    // Recorrer el arreglo recibido y generar las tarjetas
     listaProductos.forEach(producto => {
         const tarjeta = document.createElement("article");
         tarjeta.classList.add("tarjeta-producto");
+
+        // Formatear precio para Colombia con separador de miles
+        const precioFormateado = `$${producto.precio.toLocaleString("es-CO")}`;
 
         tarjeta.innerHTML = `
             <img src="${producto.imagen}" alt="${producto.nombre}" class="producto-img">
             <div class="producto-info">
                 <div class="producto-header">
                     <h3 class="producto-nombre">${producto.nombre}</h3>
-                    <span class="producto-precio">${producto.precio}</span>
+                    <span class="producto-precio">${precioFormateado}</span>
                 </div>
                 <span class="producto-categoria">${producto.categoria}</span>
                 <p class="producto-desc">${producto.descripcion}</p>
@@ -100,8 +96,37 @@ function renderizarProductos(listaProductos) {
 }
 
 // ==========================================================================
-// 3. INICIALIZACIÓN AL CARGAR EL DOCUMENTO
+// 3. FUNCIÓN PARA CONFIGURAR LOS FILTROS POR CATEGORÍA
+// ==========================================================================
+function configurarFiltros() {
+    const botonesFiltro = document.querySelectorAll(".btn-filtro");
+
+    botonesFiltro.forEach(boton => {
+        boton.addEventListener("click", () => {
+            // Actualizar estilo visual del botón activo
+            botonesFiltro.forEach(btn => btn.classList.remove("activo"));
+            boton.classList.add("activo");
+
+            // Obtener la categoría seleccionada
+            const categoriaSeleccionada = boton.getAttribute("data-categoria");
+
+            // Filtrar productos según la categoría
+            if (categoriaSeleccionada === "todos") {
+                renderizarProductos(productos);
+            } else {
+                const productosFiltrados = productos.filter(
+                    producto => producto.categoria === categoriaSeleccionada
+                );
+                renderizarProductos(productosFiltrados);
+            }
+        });
+    });
+}
+
+// ==========================================================================
+// 4. INICIALIZACIÓN AL CARGAR EL DOCUMENTO
 // ==========================================================================
 document.addEventListener("DOMContentLoaded", () => {
     renderizarProductos(productos);
+    configurarFiltros();
 });
