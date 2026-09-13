@@ -2,61 +2,220 @@
 // 1. ARREGLO DE PRODUCTOS (TIENDA VERDOLAGA)
 // ==========================================================================
 const productos = [
+    // --- 1. CAMISETAS (10 productos) ---
     {
-        nombre: "Camiseta Verde Clásica",
+        nombre: "Camiseta Verde Clásica, temporada 2011",
         categoria: "camisetas",
         precio: 249900,
-        imagen: "https://images.unsplash.com/photo-1577210897949-1f56f9435824?w=500&auto=format&fit=crop&q=60",
+        imagen: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSqPCRB-V_Lq1tjBTEsCF-5WnI57uUwhRhBGJ-A1Uct2KtHF3MKjQIsbYE&s=10",
         descripcion: "Diseño tradicional con las clásicas franjas verdes y blancas, confeccionada en tejido transpirable."
     },
     {
-        nombre: "Camiseta Blanca Verdolaga",
+        nombre: "Camiseta Blanca Verdolaga, temporada 2026",
         categoria: "camisetas",
         precio: 239900,
-        imagen: "https://images.unsplash.com/photo-1521572267360-ee0c2909d518?w=500&auto=format&fit=crop&q=60",
+        imagen: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSuD2t_5jGZJY7KslmBIaGGcRAyYA9kfCNPxeKF5qYkFOs0A9Q7C7sI24jg&s=10",
         descripcion: "Edición visitante en color blanco con detalles verdes y escudo bordado de alta definición."
     },
     {
-        nombre: "Camiseta Alternativa Negra",
+        nombre: "Camiseta Alternativa Negra, temporada 2025",
         categoria: "camisetas",
         precio: 229900,
-        imagen: "https://images.unsplash.com/photo-1503342217505-b0a15ec3261c?w=500&auto=format&fit=crop&q=60",
-        descripcion: "Estilo moderno en fondo negro con vivos verdes neón y acabado de alto rendimiento deportivo."
+        imagen: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRcaWFrHZRkvZ9WcwtIuhuwZroy-3i4blD3cKonW9alP_v4hsbMsMgO1_g3&s=10",
+        descripcion: "Estilo moderno en fondo negro con detalles dorados."
     },
+    {
+        nombre: "Camiseta Retro Época Dorada, temporada 1989",
+        categoria: "camisetas",
+        precio: 219900,
+        imagen: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTpdIZv4SfFq1oXwNxAZ-CZulrr373_VaYJfzPvQHzSOA&s=10",
+        descripcion: "Diseño de corte clásico con cuello tipo polo."
+    },
+    {
+        nombre: "Camiseta de Entrenamiento",
+        categoria: "camisetas",
+        precio: 159900,
+        imagen: "https://peopleplays.vtexassets.com/arquivos/ids/579530-800-auto?v=639059970442700000&width=800&height=auto&aspect=true",
+        descripcion: "Prenda deportiva ligera con tecnología de secado rápido, pensada para la actividad física diaria."
+    },
+    {
+        nombre: "Camiseta Edición Homenaje Chapecoense, temporada 2026",
+        categoria: "camisetas",
+        precio: 259900,
+        imagen: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQw80ICTxzR7iaAoFq6daJOSZrwXhrTeMujWV2HbPOhuWWNIWwc9fJm2VI&s=10",
+        descripcion: "Edición especial homenaje a la tragedia de Chapecoense."
+    },
+    {
+        nombre: "Camiseta con Firma Histórica de Alexis Henríquez, temporada 2015",
+        categoria: "camisetas",
+        precio: 249900,
+        imagen: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQJ93Du7cPYG8g0pRAF8cpfYD5dw1m2FvDqpTZXAeK9QDYNiw1-gi_QLoY&s=10",
+        descripcion: "Camiseta del legendario Alexis Henríquez, temporada 2015."
+    },
+    {
+        nombre: "Camiseta Coleccionable visitante, temporada 2004",
+        categoria: "camisetas",
+        precio: 239900,
+        imagen: "https://fuegoverde.com.co/wp-content/uploads/2022/04/nacional-2004.jpg",
+        descripcion: "Camiseta visitante del año 2004, año en el que el verde disputo dos finales de liga."
+    },
+    {
+        nombre: "Camiseta Urbana Blow Up",
+        categoria: "camisetas",
+        precio: 129900,
+        imagen: "https://velocitysavage.com/cdn/shop/files/camiseta-atletico-nacional-verde-edicion-blow-up-4276987.png?v=1772489527",
+        descripcion: "Camiseta con estilo para lucir los colores en cualquier momento."
+    },
+    {
+        nombre: "Camiseta Edición Leyenda del Arco Franco Armani, temporada 2016",
+        categoria: "camisetas",
+        precio: 229900,
+        imagen: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSjgmeFYX7Zajod5pwrOZ9EPkKJHm0e75zhlzETlX2m9RpiTCfvmAqucT8U&s=10",
+        descripcion: "Buzo de arquero manga larga morada."
+    },
+
+    // --- 2. ACCESORIOS (10 productos) ---
     {
         nombre: "Gorra Verde Urbana",
         categoria: "accesorios",
         precio: 69900,
-        imagen: "https://images.unsplash.com/photo-1588850561407-ed78c282e89b?w=500&auto=format&fit=crop&q=60",
+        imagen: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR7iAltBycit9fNYL9YXzvtVocwBh3POZinJ3dHEe9R2w&s=10",
         descripcion: "Gorra con visera curva, broche ajustable y escudo verdolaga bordado en relieve."
     },
     {
-        nombre: "Bufanda Verdolaga Estadio",
+        nombre: "Bufanda Verdolaga",
         categoria: "accesorios",
         precio: 45000,
-        imagen: "https://images.unsplash.com/photo-1520903920243-00d872a2d1c9?w=500&auto=format&fit=crop&q=60",
-        descripcion: "Bufanda tejida doble faz con flecos y la frase representativa de la hinchada."
+        imagen: "https://fuegoverde.com.co/wp-content/uploads/2019/06/Bufanda-Tejida-Atletico-Nacional-Doble-Fax-Lana-Acrilica-3.jpg",
+        descripcion: "Bufanda negra."
     },
     {
         nombre: "Termo Metálico Verdolaga",
         categoria: "accesorios",
         precio: 55000,
-        imagen: "https://images.unsplash.com/photo-1602143407151-7111542de6e8?w=500&auto=format&fit=crop&q=60",
+        imagen: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSU5Tqb0VdfLb9vHv137MLqd_JgeyPL-PNTBg2gk70V4MGrh0O3FcmQKfU&s=10",
         descripcion: "Botella de acero inoxidable con tapa hermética para mantener tus bebidas a temperatura ideal."
     },
     {
-        nombre: "Bandera Gigante 'Soy del Verde'",
-        categoria: "coleccionables",
-        precio: 49900,
-        imagen: "https://images.unsplash.com/photo-1517466787929-bc90951d0974?w=500&auto=format&fit=crop&q=60",
-        descripcion: "Bandera de gran tamaño (1.50 x 1.00 m) elaborada en poliéster resistente para alentar con orgullo."
+        nombre: "Llavero Escudo Metálico",
+        categoria: "accesorios",
+        precio: 24900,
+        imagen: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSTogk9TpZ4nqljyZITva2fKibGQaXLaTLpAYV5XUrwy3VrvWBZ9KrVsoM&s=10",
+        descripcion: "Llavero de aleación metálica con acabado esmaltado de alta durabilidad y argolla reforzada."
     },
     {
-        nombre: "Balón Coleccionable Gloria",
-        categoria: "coleccionables",
+        nombre: "Gorra campeon liga 2024",
+        categoria: "accesorios",
+        precio: 74900,
+        imagen: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSI_ZjkYwJ-1OeADZmmPxYWP5QbWkDI19imEgawZZbCH8G2gWugDP7YFII&s=10",
+        descripcion: "Gorra blanca de los festejas del titulo de liga 2024."
+    },
+    {
+        nombre: "Taza Cerámica Verdolaga",
+        categoria: "accesorios",
+        precio: 29900,
+        imagen: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTfOnhCpjSqjs41m7Q9hGs_pvlItdZqWKH8hN-QFCabweCTskSR8OJDNsA&s=10",
+        descripcion: "Taza de cerámica con la mascota del equipo nacho."
+    },
+    {
+        nombre: "Mochila Deportiva de Viaje",
+        categoria: "accesorios",
         precio: 119900,
-        imagen: "https://images.unsplash.com/photo-1614632537423-1e6c2e7e0aab?w=500&auto=format&fit=crop&q=60",
-        descripcion: "Balón decorativo conmemorativo con detalles dorados de los títulos y copas más importantes."
+        imagen: "https://http2.mlstatic.com/D_Q_NP_2X_824672-MCO83591749488_042025-T.webp",
+        descripcion: "Morral blanco perfecto para viajes."
+    },
+    {
+        nombre: "Set de Pines Esmaltados (3 Piezas)",
+        categoria: "accesorios",
+        precio: 34900,
+        imagen: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRm4ycloYqzwz_BErDbAfoPl_rSUrPbiqHYibvQf0xE3w&s=10",
+        descripcion: "Juego de 3 prendedores metálicos esmaltados para personalizar camisetas, chaquetas o mochilas."
+    },
+    {
+        nombre: "Billetera de Cuero Sintético Verdolaga",
+        categoria: "accesorios",
+        precio: 49900,
+        imagen: "https://http2.mlstatic.com/D_NQ_NP_700798-MCO114183698145_072026-O.webp",
+        descripcion: "Billetera compacta con grabado sutil del escudo, tarjetero y compartimento para billetes."
+    },
+    {
+        nombre: "Pulsera de Acero Inoxidable y Cordón",
+        categoria: "accesorios",
+        precio: 21900,
+        imagen: "https://mktaddi.vteximg.com.br/arquivos/ids/87294751/85848d3f-97bd-43e6-9a62-d7a84ab6e634-PCD73G___36dc99956e244628ca05b4e835543821.jpg?v=639136076353300000",
+        descripcion: "Brazalete ajustable elaborado con cordón de alta resistencia y placa grabada en láser."
+    },
+
+    // --- 3. COLECCIONABLES (10 productos) ---
+    {
+        nombre: "Bandera Gigante 'Rey de copas'",
+        categoria: "coleccionables",
+        precio: 49900,
+        imagen: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQNn7VoxqjGZRDeWTzBL2g2by4PuJxVoM_x7p8K9LygoTK9yZRSnhUycNFa&s=10",
+        descripcion: "Bandera resistente para alentar con orgullo."
+    },
+    {
+        nombre: "Balón Coleccionable vintage",
+        categoria: "coleccionables",
+        precio: 85000,
+        imagen: "https://lacanchatiendadeportiva.com.co/cdn/shop/files/rn-image_picker_lib_temp_e1c08d2a-b180-43d8-9f4b-e6ddc02c40a0.jpg?v=1764959849",
+        descripcion: "Balón decorativo conmemorativo con detalles dorados."
+    },
+    {
+        nombre: "Balón final liga 2024",
+        categoria: "coleccionables",
+        precio: 249900,
+        imagen: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSyT8lxkWh-VvZcG6z947EfhUuyKSbGtzF9zsH8jZfKNf3I-2el6c3ph7Q&s=10",
+        descripcion: "Balón final de la liga 2024 Vuelta Contra Deportes Tolima."
+    },
+    {
+        nombre: "Cuadro decorativo campeon libertadores",
+        categoria: "coleccionables",
+        precio: 100900,
+        imagen: "https://http2.mlstatic.com/D_NQ_NP_678687-MCO111153675264_052026-O.webp",
+        descripcion: "Cuadro conmemorativo de aquel 27 de julio de 2016"
+    },
+    {
+        nombre: "balon atletico nacional",
+        categoria: "coleccionables",
+        precio: 34900,
+        imagen: "https://fuegoverde.com.co/wp-content/uploads/2023/09/balon-nacional.jpg",
+        descripcion: "balon de atletico nacional verde y blanco."
+    },
+    {
+        nombre: "Placa Decorativa Metálica",
+        categoria: "coleccionables",
+        precio: 39900,
+        imagen: "https://static.wixstatic.com/media/b8b0b3_7773a3f4be4f4145918fc8ce40a42f1e~mv2.png/v1/fit/w_500,h_500,q_90/file.png",
+        descripcion: "Placa de aluminio."
+    },
+    {
+        nombre: "Placa decorativa 'soy del verde, soy feliz'",
+        categoria: "coleccionables",
+        precio: 39900,
+        imagen: "https://static.wixstatic.com/media/b8b0b3_b92c8f212f1e42518b7015c3862897f0~mv2.png/v1/fit/w_500,h_500,q_90/file.png",
+        descripcion: "Placa decorativa con mensaje inspirador."
+    },
+    {
+        nombre: "Álbum histórico tricampeón",
+        categoria: "coleccionables",
+        precio: 144900,
+        imagen: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT5jr1GRYGFJBgkOBDyvmyedrNfiL9Y5mRxbWGDL8NQ6lrjsw0GHCg17esK&s=10",
+        descripcion: "Álbum conmemorativo de los tres títulos consecutivos de liga."
+    },
+    {
+        nombre: "Escudo Decorativo 3D Multicapa",
+        categoria: "coleccionables",
+        precio: 80900,
+        imagen: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQrH9Oe1hQ2R1Re80W2qxib7u8iMNWAgsv8w5GHuQ5WDA&s=10",
+        descripcion: "Pieza artesanal de pared con acabado en relieve y colores verde y blancos."
+    },
+    {
+        nombre: "Réplica de Trofeo de Colección libertadores 2016",
+        categoria: "coleccionables",
+        precio: 289900,
+        imagen: "https://http2.mlstatic.com/D_NQ_NP_703888-MCO54289219192_032023-O.webp",
+        descripcion: "Figura decorativa libertadores 2016."
     }
 ];
 
@@ -80,7 +239,7 @@ function renderizarProductos(listaProductos) {
         const precioFormateado = `$${producto.precio.toLocaleString("es-CO")}`;
 
         tarjeta.innerHTML = `
-            <img src="${producto.imagen}" alt="${producto.nombre}" class="producto-img">
+            <img src="${producto.imagen}" alt="${producto.nombre} - Tienda Verdolaga" class="producto-img">
             <div class="producto-info">
                 <div class="producto-header">
                     <h3 class="producto-nombre">${producto.nombre}</h3>
@@ -292,7 +451,9 @@ function configurarMenuHamburguesa() {
 // 6. INICIALIZACIÓN AL CARGAR EL DOCUMENTO
 // ==========================================================================
 document.addEventListener("DOMContentLoaded", () => {
-    renderizarProductos(productos);
+    // Cargar por defecto la categoría 'camisetas'
+    const productosIniciales = productos.filter(producto => producto.categoria === "camisetas");
+    renderizarProductos(productosIniciales);
     configurarFiltros();
     configurarFormularioRegistro();
     configurarMenuHamburguesa();
