@@ -3,7 +3,12 @@
 > Tienda Verdolaga es un sitio web académico dedicado a mostrar un catálogo de productos inspirados en los colores y la identidad de Atlético Nacional. El proyecto fue desarrollado como parte de la materia de Desarrollo Web.
 
 ---
+## Proyecto desplegado
 
+**Enlace de Vercel:** 
+(https://atletico-nacional.vercel.app/)
+
+---
 ## Descripción del proyecto
 
 Tienda Verdolaga es una propuesta de sitio web creada para presentar un catálogo interactivo de artículos temáticos inspirados en Atlético Nacional (camisetas, accesorios y coleccionables).
@@ -81,11 +86,6 @@ El sitio web fue adaptado para:
 * **Celulares:** Navegación plegable mediante menú hamburguesa, catálogo en 1 sola columna y formulario con espaciados cómodos para pantallas táctiles.
 
 ---
-
-## Proyecto desplegado
-
-**Enlace de Vercel:** `PENDIENTE`
-
 
 ## Parte más difícil del proyecto
 
