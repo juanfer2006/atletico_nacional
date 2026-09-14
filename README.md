@@ -89,12 +89,14 @@ El sitio web fue adaptado para:
 
 ## Capturas
 
-**Escritorio**
+### 💻 Vista de Escritorio
 ![Vista de Escritorio](./web.JPG)
 
-**Movil**
-![Vista de Escritorio](./movil.jpeg)
+---
 
+### 📱 Vista Móvil
+![Vista de Móvil](./movil.jpeg)
+---
 ## Parte más difícil del proyecto
 
 Como dificultad técnica destacó la implementación de la generación dinámica del catálogo de productos con sus filtros por categoría y la gestión de la validación del formulario en tiempo real dentro del DOM sin utilizar librerías externas.
